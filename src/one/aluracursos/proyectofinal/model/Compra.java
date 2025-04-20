@@ -2,13 +2,8 @@ package one.aluracursos.proyectofinal.model;
 
 public class Compra implements Comparable<Compra> {
     private String descripcion;
-
-    @Override
-    public int compareTo(Compra otraCompra) {
-        return Double.valueOf(this.valor).compareTo(Double.valueOf(otraCompra.getValor()))  ;
-    }
-
     private double valor;
+
 
     // constructor
     public Compra(String descripcion, double valor) {
@@ -31,5 +26,10 @@ public class Compra implements Comparable<Compra> {
                 "descripcion='" + descripcion + '\'' +
                 ", valor=" + valor +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Compra otraCompra) {
+        return Double.valueOf(this.valor).compareTo(Double.valueOf(otraCompra.getValor()))  ;
     }
 }
